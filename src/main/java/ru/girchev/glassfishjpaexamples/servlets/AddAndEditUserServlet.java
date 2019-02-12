@@ -1,6 +1,7 @@
-package ru.girchev.glassfishjpaexamples;
+package ru.girchev.glassfishjpaexamples.servlets;
 
 import ru.girchev.glassfishjpaexamples.domain.User;
+import ru.girchev.glassfishjpaexamples.service.Chapter6_0ServiceBean;
 import ru.girchev.glassfishjpaexamples.service.UserBean;
 
 import javax.ejb.EJB;
@@ -16,7 +17,7 @@ import java.io.IOException;
  * @author Girchev N.A.
  * Date: 11.02.2019
  */
-@WebServlet("/add")
+@WebServlet("/addUser")
 public class AddAndEditUserServlet extends HttpServlet {
 
     @EJB
@@ -38,7 +39,7 @@ public class AddAndEditUserServlet extends HttpServlet {
             req.setAttribute("user", user);
         }
 
-        req.getRequestDispatcher("/add.jsp").forward(req, resp);
+        req.getRequestDispatcher("/addUser.jsp").forward(req, resp);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ru.girchev.glassfishjpaexamples;
+package ru.girchev.glassfishjpaexamples.servlets;
 
 import ru.girchev.glassfishjpaexamples.domain.User;
 import ru.girchev.glassfishjpaexamples.service.UserBean;
@@ -17,7 +17,7 @@ import java.util.List;
  * Date: 11.02.2019
  */
 @WebServlet("/list")
-public class MainServlet extends HttpServlet{
+public class ListServlet extends HttpServlet{
 
     // Аннотация говорит о том,
     // что данный объект будет инициализирован

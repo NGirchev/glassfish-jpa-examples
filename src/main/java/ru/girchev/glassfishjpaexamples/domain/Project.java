@@ -21,4 +21,6 @@ public class Project {
 
     @ManyToMany(mappedBy = "projects")
     private List<Employee> employees = new ArrayList<Employee>();
+
+    private String name;
 }
