@@ -24,6 +24,8 @@ public class MainService {
     private Chapter6_1ServiceBean chapter61ServiceBean;
     @EJB
     private Chapter6_2ServiceBean chapter62ServiceBean;
+    @EJB
+    private Chapter6_4ServiceBean chapter64ServiceBean;
 
     @Inject
     private Logger logger;
@@ -83,5 +85,13 @@ public class MainService {
         // @Stateless + PersistenceContextType.EXTENDED
         // Caused by: java.lang.IllegalStateException: EntityManager with
         // PersistenceContextType.EXTENDED is not supported for this bean type
+        //////////////////////////////////////////////////////////////////////
+
+        // @Stateful + Application Managed PC
+        // changes in DB name
+        // PC shared between two method after joinTransaction
+        chapter64ServiceBean.initPrj();
+        chapter64ServiceBean.setNamePrj("Project4");
+        chapter64ServiceBean.print();
     }
 }
